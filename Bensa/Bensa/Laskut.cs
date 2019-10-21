@@ -9,9 +9,12 @@ namespace Bensa
 {
     public class Laskut
     {
-        static readonly string filepath = "C:/Temp/Bensis.txt";
-        static readonly string filepath2 = "C:/Temp/BensisKuitit.txt";       
-        static readonly string filepath3 = "C:/Temp/BensisOstoHinnat.txt";
+        static readonly string filepath = "C:/temp/Bensis.txt";
+        static readonly string filepath2 = "C:/temp/BensisKuitit.txt";       
+        static readonly string filepath3 = "C:/temp/BensisOstoHinnat.txt";
+        static readonly string filepathE95 = "C:/Temp/maara95.txt";
+        static readonly string filepathE98 = "C:/Temp/maara98.txt";
+        static readonly string filepathD = "C:/Temp/maarad.txt";
         static public string Hinta(double määrä, string laatu)
         {
                       
@@ -84,11 +87,43 @@ namespace Bensa
             sw.WriteLine("Diesel: " + diesel);
             sw.Close();
             
-            
-            
+        }
+        static public void MääräLasku(double litrat, string laatu)
+        {
 
-
-
+            switch(laatu)
+            {
+                case "E95":
+                    StreamReader sr1 = new StreamReader(filepathE95);
+                    double määrä1 = double.Parse(sr1.ReadLine());
+                    sr1.Close();
+                    StreamWriter sw1 = new StreamWriter(filepathE95);
+                    
+                    määrä1 = määrä1 - litrat;
+                    sw1.WriteLine(määrä1);
+                    sw1.Close();
+                    break;
+                case "E98":
+                    StreamReader sr2 = new StreamReader(filepathE98);
+                    double määrä2 = double.Parse(sr2.ReadLine());
+                    sr2.Close();
+                    StreamWriter sw2 = new StreamWriter(filepathE98);
+                    
+                    määrä1 = määrä2 - litrat;
+                    sw2.WriteLine(määrä1);
+                    sw2.Close();
+                    break;
+                case "Diesel":
+                    StreamReader sr3 = new StreamReader(filepathD);
+                    double määrä3 = double.Parse(sr3.ReadLine());
+                    sr3.Close();
+                    StreamWriter sw3 = new StreamWriter(filepathD);
+                    
+                    määrä1 = määrä3 - litrat;
+                    sw3.WriteLine(määrä1);
+                    sw3.Close();
+                    break;
+            }
         }
     }
 }

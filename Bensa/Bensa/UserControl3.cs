@@ -14,6 +14,7 @@ namespace Bensa
     
     public partial class UserControl3 : UserControl
     {
+        
         static readonly string filepath1 = "C:/Temp/BensisOstoHinnat.txt";
         static readonly string filepath2 = "C:/Temp/Bensis.txt";
         //static private string e95Osto = File.ReadLines(filepath1).ElementAt(0);
@@ -25,7 +26,7 @@ namespace Bensa
             
             InitializeValues();
         }
-
+        
         private void UserControl3_Load(object sender, EventArgs e)
         {
             //
@@ -149,7 +150,16 @@ namespace Bensa
             sw.WriteLine("E98: " + textBox5.Text.Substring(0, textBox5.Text.Length - 2));
             sw.WriteLine("Die: " + textBox4.Text.Substring(0, textBox4.Text.Length - 2));
             sw.Close();
+            //((Form)this.TopLevelControl).Close();
+            Form tmp = this.FindForm();
+            tmp.Close();
+            tmp.Dispose();
+           
+            
+
+
             Form1 f = new Form1();
+            
             f.InitializeValues();
             f.ShowDialog();
         }

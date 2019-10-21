@@ -12,6 +12,7 @@ namespace Bensa
 {
     public partial class LoginForm : Form
     {
+        static bool oikein = false;
         public LoginForm()
         {
             InitializeComponent();
@@ -28,10 +29,13 @@ namespace Bensa
             string userTunnus = textBox1.Text;
             string userSalasana = textBox2.Text;
             string tiiviste = Kryptaus.Salaus(userSalasana);
-            bool oikein = Kryptaus.Tarkistus(tiiviste, userTunnus);
+            oikein = Kryptaus.Tarkistus(tiiviste, userTunnus);
+
             if (oikein)
             {
-                Close();
+                Form tmp = this.FindForm();
+                tmp.Close();
+                tmp.Dispose();
                 AdminForm ad = new AdminForm();
                 ad.ShowDialog();
             }
@@ -41,6 +45,19 @@ namespace Bensa
                 textBox2.Text = "";
             }
 
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!oikein)
+            {
+                Form tmp = this.FindForm();
+                tmp.Hide();
+
+                Form1 f = new Form1();
+                f.ShowDialog();
+            }
+            
         }
     }
 }

@@ -29,5 +29,10 @@ namespace Bensa
             Form form1 = new Form1();
             Close();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

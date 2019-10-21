@@ -23,7 +23,11 @@ namespace Bensa
         string hinta = "";
         static string bensa = "";
         static string filepath = "C:/Temp/Bensis.txt";
-        static System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/Temp/SoundClips/Beep.wav");
+        
+        static System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+
+        LoginForm login = new LoginForm();
+
         public Form1()
         {
             
@@ -71,7 +75,7 @@ namespace Bensa
                 tyhjennys = true;
                 textBox4.Text = "Syötä tunnusluku";
                 button11.Enabled = true;
-                Beep.Play();
+                //Beep.Play();
             }
             kortti = true;
             
@@ -86,7 +90,7 @@ namespace Bensa
             {
                 Button numero = (Button)sender;
                 textBox4.Text += numero.Text;
-                Beep.Play();
+                //Beep.Play();
             }
         }
 
@@ -102,7 +106,7 @@ namespace Bensa
         private void Button11_Click(object sender, EventArgs e) //OK Näppäin
         {
             string pin = textBox4.Text;
-            Beep.Play();
+            //Beep.Play();
            
                 try
                 {
@@ -149,7 +153,7 @@ namespace Bensa
         {
             if (!kortti && valinta)
             {
-                Beep.Play();
+                //Beep.Play();
                 valinta = false;
                 tyhjennys = true;
                 TextBoxClear();
@@ -173,11 +177,12 @@ namespace Bensa
         {
             if (tankkaus)
             {
-                Beep.Play();
+                //Beep.Play();
                 tyhjennys = true;
                 TextBoxClear();
                 Progress(litrat);
                 Laskut.Talletus(bensa, litrat, hinta);
+                Laskut.MääräLasku(litrat, bensa);
             }
            
             
@@ -200,7 +205,7 @@ namespace Bensa
 
         private void Button12_Click(object sender, EventArgs e) //Delete nappi
         {
-            Beep.Play();
+            //Beep.Play();
             textBox4.Text = "";
         }
         private async void Progress(double litrat) //ProgressBar
@@ -235,7 +240,11 @@ namespace Bensa
             {
                 kuitti = false;
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer("C:/Temp/SoundClips/Printer.wav");
-                player.Play();
+                //player.Play();
+                this.Hide();
+                this.Dispose();
+                Form1 f1 = new Form1();
+                f1.ShowDialog();
                 
             }
             
@@ -244,13 +253,19 @@ namespace Bensa
         private void Button14_Click(object sender, EventArgs e)
         {
             System.Media.SoundPlayer player3 = new System.Media.SoundPlayer("C:/Temp/SoundClips/Calling.wav");
-            player3.Play();
+            //player3.Play();
         }
 
         private void AdminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
+            
+            //LoginForm login = new LoginForm();
+            
+            Form tmp = this.FindForm();
+            tmp.Hide();  
             login.ShowDialog();
+            tmp.Close();
+            tmp.Dispose();
         }
 
         

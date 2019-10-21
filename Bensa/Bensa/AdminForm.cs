@@ -55,5 +55,10 @@ namespace Bensa
             userControl21.BringToFront();
             
         }
+
+        private void UserControl31_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
