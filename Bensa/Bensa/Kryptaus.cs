@@ -11,7 +11,7 @@ namespace Bensa
 {
     class Kryptaus
     {
-        static string filepath = "C:/Temp/Salasanat.txt";
+        static string filepath = "C:/temp/Salasanat.txt";
         static private string tunnusAdmin = "";
         static private string salasanaAdmin = "";
         public Kryptaus()

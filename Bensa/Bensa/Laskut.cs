@@ -9,9 +9,9 @@ namespace Bensa
 {
     public class Laskut
     {
-        static readonly string filepath = "C:/Temp/Bensis.txt";
-        static readonly string filepath2 = "C:/Temp/BensisKuitit.txt";       
-        static readonly string filepath3 = "C:/Temp/BensisOstoHinnat.txt";
+        static readonly string filepath = "C:/temp/Bensis.txt";
+        static readonly string filepath2 = "C:/temp/BensisKuitit.txt";       
+        static readonly string filepath3 = "C:/temp/BensisOstoHinnat.txt";
         static public string Hinta(double määrä, string laatu)
         {
                       

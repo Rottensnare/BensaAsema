@@ -22,8 +22,8 @@ namespace Bensa
         static double litrat = 0;
         string hinta = "";
         static string bensa = "";
-        static string filepath = "C:/Temp/Bensis.txt";
-        static System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/Temp/SoundClips/Beep.wav");
+        static string filepath = "C:/temp/Bensis.txt";
+        static System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
         public Form1()
         {
             
@@ -234,7 +234,7 @@ namespace Bensa
             if (kuitti)
             {
                 kuitti = false;
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer("C:/Temp/SoundClips/Printer.wav");
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer("C:/temp/SoundClips/Printer.wav");
                 player.Play();
                 
             }
@@ -243,7 +243,7 @@ namespace Bensa
 
         private void Button14_Click(object sender, EventArgs e)
         {
-            System.Media.SoundPlayer player3 = new System.Media.SoundPlayer("C:/Temp/SoundClips/Calling.wav");
+            System.Media.SoundPlayer player3 = new System.Media.SoundPlayer("C:/temp/SoundClips/Calling.wav");
             player3.Play();
         }
 
