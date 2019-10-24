@@ -1,0 +1,326 @@
+
+Aika: 09/10/2019 15:50:36
+Laatu: Diesel
+Ostettu määrä: 12 Litraa
+Ostoksen hinta: 15.828 € €
+----------------------------
+Aika: 09/10/2019 15:51:08
+Laatu: E98
+Ostettu määrä: 40 Litraa
+Ostoksen hinta: 62.68 € €
+----------------------------
+Aika: 09/10/2019 15:52:18
+Laatu: E95
+Ostettu määrä: 45 Litraa
+Ostoksen hinta: 67.41 €
+----------------------------
+Aika: 09/10/2019 15:53:50
+Laatu: Diesel
+Ostettu määrä: 100 Litraa
+Ostoksen hinta: 131.9 €
+----------------------------
+Aika: 09/10/2019 16:03:43
+Laatu: E95
+Ostettu määrä: 20 Litraa
+Ostoksen hinta: 29.96 €
+----------------------------
+Aika: 09/10/2019 16:06:41
+Laatu: E95
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 74.9 €
+----------------------------
+Aika: 09/10/2019 16:32:01
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.19 €
+----------------------------
+Aika: 09/10/2019 17:58:11
+Laatu: E95
+Ostettu määrä: 96 Litraa
+Ostoksen hinta: 143.808 €
+----------------------------
+Aika: 09/10/2019 18:11:52
+Laatu: E98
+Ostettu määrä: 25 Litraa
+Ostoksen hinta: 39.175 €
+----------------------------
+Aika: 09/10/2019 18:29:19
+Laatu: Diesel
+Ostettu määrä: 20 Litraa
+Ostoksen hinta: 26.38 €
+----------------------------
+Aika: 10/10/2019 10:30:06
+Laatu: E98
+Ostettu määrä: 12 Litraa
+Ostoksen hinta: 18.804 €
+----------------------------
+Aika: 10/10/2019 10:36:39
+Laatu: Diesel
+Ostettu määrä: 43 Litraa
+Ostoksen hinta: 56.717 €
+----------------------------
+Aika: 10/10/2019 11:43:52
+Laatu: E98
+Ostettu määrä: 7 Litraa
+Ostoksen hinta: 10.969 €
+----------------------------
+Aika: 10/10/2019 18:37:43
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.19 €
+----------------------------
+Aika: 10/10/2019 23:44:56
+Laatu: E95
+Ostettu määrä: 12 Litraa
+Ostoksen hinta: 17.976 €
+----------------------------
+Aika: 11/10/2019 10:53:38
+Laatu: E98
+Ostettu määrä: 40 Litraa
+Ostoksen hinta: 62.68 €
+----------------------------
+Aika: 11/10/2019 10:55:44
+Laatu: E95
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 74.9 €
+----------------------------
+Aika: 11/10/2019 19:28:36
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 15.67 €
+----------------------------
+Aika: 11/10/2019 19:44:47
+Laatu: Diesel
+Ostettu määrä: 52 Litraa
+Ostoksen hinta: 53.144 €
+----------------------------
+Aika: 11/10/2019 20:23:13
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 15.98 €
+----------------------------
+Aika: 11/10/2019 22:24:46
+Laatu: E95
+Ostettu määrä: 11 Litraa
+Ostoksen hinta: 25.036 €
+----------------------------
+Aika: 22/10/2019 14:28:48
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 14.68 €
+----------------------------
+Aika: 22/10/2019 14:32:03
+Laatu: E95
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 65.45 €
+----------------------------
+Aika: 22/10/2019 14:59:48
+Laatu: E95
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 65.45 €
+----------------------------
+Aika: 22/10/2019 15:10:09
+Laatu: E98
+Ostettu määrä: 100 Litraa
+Ostoksen hinta: 137.5 €
+----------------------------
+Aika: 22/10/2019 15:11:14
+Laatu: E95
+Ostettu määrä: 20 Litraa
+Ostoksen hinta: 26.18 €
+----------------------------
+Aika: 22/10/2019 15:11:32
+Laatu: E98
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 68.75 €
+----------------------------
+Aika: 22/10/2019 15:11:54
+Laatu: Diesel
+Ostettu määrä: 20 Litraa
+Ostoksen hinta: 19.16 €
+----------------------------
+Aika: 22/10/2019 15:58:19
+Laatu: Diesel
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 114.96 €
+----------------------------
+Aika: 22/10/2019 15:59:10
+Laatu: E95
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 65.45 €
+----------------------------
+Aika: 22/10/2019 16:02:08
+Laatu: E98
+Ostettu määrä: 22 Litraa
+Ostoksen hinta: 30.25 €
+----------------------------
+Aika: 22/10/2019 16:27:37
+Laatu: E98
+Ostettu määrä: 45 Litraa
+Ostoksen hinta: 61.875 €
+----------------------------
+Aika: 22/10/2019 18:15:23
+Laatu: E98
+Ostettu määrä: 60 Litraa
+Ostoksen hinta: 96.3 €
+----------------------------
+Aika: 22/10/2019 19:00:59
+Laatu: Diesel
+Ostettu määrä: 40 Litraa
+Ostoksen hinta: 45.08 €
+----------------------------
+Aika: 22/10/2019 19:02:42
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.59 €
+----------------------------
+Aika: 22/10/2019 19:17:36
+Laatu: E95
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 58 €
+----------------------------
+Aika: 23/10/2019 10:51:12
+Laatu: E98
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 190.32 €
+----------------------------
+Aika: 23/10/2019 10:53:08
+Laatu: E95
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 173.88 €
+----------------------------
+Aika: 23/10/2019 10:58:03
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.55 €
+----------------------------
+Aika: 23/10/2019 10:58:39
+Laatu: E95
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 173.88 €
+----------------------------
+Aika: 24/10/2019 18:40:53
+Laatu: Diesel
+Ostettu määrä: 40 Litraa
+Ostoksen hinta: 54.2 €
+----------------------------
+Aika: 24/10/2019 18:41:41
+Laatu: E95
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 181.92 €
+----------------------------
+Aika: 24/10/2019 18:56:57
+Laatu: Diesel
+Ostettu määrä: 50 Litraa
+Ostoksen hinta: 62.79 €
+----------------------------
+Aika: 24/10/2019 18:57:17
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 15.7125 €
+----------------------------
+Aika: 24/10/2019 19:22:47
+Laatu: E98
+Ostettu määrä: 20 Litraa
+Ostoksen hinta: 31.425 €
+----------------------------
+Aika: 24/10/2019 19:25:38
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.925 €
+----------------------------
+Aika: 24/10/2019 19:26:16
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.925 €
+----------------------------
+Aika: 24/10/2019 19:29:21
+Laatu: E95
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.975 €
+----------------------------
+Aika: 24/10/2019 19:29:33
+Laatu: E95
+Ostettu määrä: 12 Litraa
+Ostoksen hinta: 16.77 €
+----------------------------
+Aika: 24/10/2019 19:29:56
+Laatu: E95
+Ostettu määrä: 13 Litraa
+Ostoksen hinta: 18.1675 €
+----------------------------
+Aika: 24/10/2019 19:33:29
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 12.389 €
+----------------------------
+Aika: 24/10/2019 19:37:43
+Laatu: Diesel
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 12.389 €
+----------------------------
+Aika: 24/10/2019 19:38:25
+Laatu: Diesel
+Ostettu määrä: 30 Litraa
+Ostoksen hinta: 37.167 €
+----------------------------
+Aika: 24/10/2019 19:54:34
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.925 €
+----------------------------
+Aika: 24/10/2019 19:55:13
+Laatu: E98
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 167.1 €
+----------------------------
+Aika: 24/10/2019 19:55:55
+Laatu: E95
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 167.7 €
+----------------------------
+Aika: 24/10/2019 19:56:50
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.925 €
+----------------------------
+Aika: 24/10/2019 19:57:08
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.925 €
+----------------------------
+Aika: 24/10/2019 20:07:07
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 17 €
+----------------------------
+Aika: 24/10/2019 20:07:23
+Laatu: E98
+Ostettu määrä: 10 Litraa
+Ostoksen hinta: 13.925 €
+----------------------------
+Aika: 24/10/2019 20:07:41
+Laatu: Diesel
+Ostettu määrä: 15 Litraa
+Ostoksen hinta: 19.5 €
+----------------------------
+Aika: 24/10/2019 20:08:10
+Laatu: Diesel
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 156 €
+----------------------------
+Aika: 24/10/2019 20:17:58
+Laatu: E98
+Ostettu määrä: 40 Litraa
+Ostoksen hinta: 68 €
+----------------------------
+Aika: 24/10/2019 20:23:13
+Laatu: Diesel
+Ostettu määrä: 20 Litraa
+Ostoksen hinta: 23.82 €
+----------------------------
+Aika: 24/10/2019 20:49:23
+Laatu: E98
+Ostettu määrä: 120 Litraa
+Ostoksen hinta: 204 €
+----------------------------

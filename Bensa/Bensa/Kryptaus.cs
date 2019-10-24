@@ -14,7 +14,7 @@ namespace Bensa
         static string filepath = "C:/Temp/Salasanat.txt";
         static private string tunnusAdmin = "";
         static private string salasanaAdmin = "";
-        public Kryptaus()
+        public Kryptaus() // Initialize admin
         {
 
             MD5CryptoServiceProvider cspAdmin = new MD5CryptoServiceProvider();
@@ -33,7 +33,7 @@ namespace Bensa
             sw.WriteLine(md5TiivisteAdmin);
             sw.Close();
         }
-        static public string Salaus(string salasana)
+        static public string Salaus(string salasana) // Salasana md5Tiivisteeksi
         {
 
 
@@ -53,7 +53,7 @@ namespace Bensa
             return md5TiivisteUser;
 
         }
-        static public bool Tarkistus(string md5Tiiviste, string tunnus)
+        static public bool Tarkistus(string md5Tiiviste, string tunnus) // Salasanan ja Tunnuksen Oikein tarkistus
         {
             string adminTiiviste = File.ReadLines(filepath).ElementAt(1);
             string adminKäyttis = File.ReadLines(filepath).ElementAt(0);

@@ -14,6 +14,7 @@ namespace Bensa
     
     public partial class UserControl3 : UserControl
     {
+        
         static readonly string filepath1 = "C:/Temp/BensisOstoHinnat.txt";
         static readonly string filepath2 = "C:/Temp/Bensis.txt";
         //static private string e95Osto = File.ReadLines(filepath1).ElementAt(0);
@@ -25,13 +26,10 @@ namespace Bensa
             
             InitializeValues();
         }
-
+        
         private void UserControl3_Load(object sender, EventArgs e)
         {
-            //
-            //
-            //
-            //
+            
         }
 
 
@@ -140,7 +138,7 @@ namespace Bensa
             double dieselMyynti = Convert.ToDouble(dieselOsto) * trackbar3Value;
             dieselMyynti = Math.Round((double)dieselMyynti, 3);
             textBox4.Text = $"{dieselMyynti.ToString()} €";
-        }
+        } // 
 
         private void Päivitys(object sender, EventArgs e)
         {
@@ -149,9 +147,37 @@ namespace Bensa
             sw.WriteLine("E98: " + textBox5.Text.Substring(0, textBox5.Text.Length - 2));
             sw.WriteLine("Die: " + textBox4.Text.Substring(0, textBox4.Text.Length - 2));
             sw.Close();
+            //((Form)this.TopLevelControl).Close();
+            Form tmp = this.FindForm();
+            tmp.Close();
+            tmp.Dispose();
+       
             Form1 f = new Form1();
+            
             f.InitializeValues();
             f.ShowDialog();
-        }
+        } //"Update" Form1
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == false)
+            {
+                numericUpDown1.Enabled = false;
+                numericUpDown2.Enabled = false;
+                numericUpDown3.Enabled = false;
+                trackBar1.Enabled = false;
+                trackBar2.Enabled = false;
+                trackBar3.Enabled = false;
+            }
+            else
+            {
+                numericUpDown1.Enabled = true;
+                numericUpDown2.Enabled = true;
+                numericUpDown3.Enabled = true;
+                trackBar1.Enabled = true;
+                trackBar2.Enabled = true;
+                trackBar3.Enabled = true;
+            }
+        } //Enable or Disable Price Change Option
     }
 }

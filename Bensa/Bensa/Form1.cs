@@ -19,11 +19,21 @@ namespace Bensa
         static bool määrä = false;
         static bool tankkaus = false;
         static bool kuitti = false;
+        static bool eriTiedostot = true;
+        static bool sound = false;
         static double litrat = 0;
         string hinta = "";
         static string bensa = "";
         static string filepath = "C:/Temp/Bensis.txt";
-        static System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/Temp/SoundClips/Beep.wav");
+        static readonly string filepath101 = "C:/Temp/hinta95.txt";
+        static readonly string filepath102 = "C:/Temp/hinta98.txt";
+        static readonly string filepath103 = "C:/Temp/hintad.txt";
+        static readonly string filepathSound = "C:/temp/SoundClips";
+       
+        
+
+        LoginForm login = new LoginForm();
+
         public Form1()
         {
             
@@ -66,12 +76,21 @@ namespace Bensa
 
         private void Label4_Click(object sender, EventArgs e) //Syötä Kortti Label
         {
+            
+            
             if (!kortti && !valinta && !määrä)
             {
                 tyhjennys = true;
                 textBox4.Text = "Syötä tunnusluku";
                 button11.Enabled = true;
-                Beep.Play();
+                if (sound)
+                {
+                    if (Directory.Exists("C:/temp/SoundClips"))
+                    {
+                        System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+                        Beep.Play();
+                    }
+                }
             }
             kortti = true;
             
@@ -86,7 +105,14 @@ namespace Bensa
             {
                 Button numero = (Button)sender;
                 textBox4.Text += numero.Text;
-                Beep.Play();
+                if (sound)
+                {
+                    if (Directory.Exists("C:/temp/SoundClips"))
+                    {
+                        System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+                        Beep.Play();
+                    }
+                }
             }
         }
 
@@ -102,9 +128,16 @@ namespace Bensa
         private void Button11_Click(object sender, EventArgs e) //OK Näppäin
         {
             string pin = textBox4.Text;
-            Beep.Play();
-           
-                try
+            if (sound)
+            {
+                if (Directory.Exists("C:/temp/SoundClips"))
+                {
+                    System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+                    Beep.Play();
+                }
+            }
+
+            try
                 {
                     litrat = double.Parse(textBox4.Text);
                 }
@@ -133,7 +166,7 @@ namespace Bensa
                 {
                     textBox4.Text = "Aloita tankkaus";
                     textBox6.Text = $"{litrat.ToString()} Litraa";
-                    textBox5.Text = $"{Laskut.Hinta(litrat, bensa)} €";
+                    textBox5.Text = $"{Laskut.Hinta(litrat, bensa, eriTiedostot)} €";
                     hinta = textBox5.Text;
                     kortti = false;
                     tankkaus = true;
@@ -149,7 +182,14 @@ namespace Bensa
         {
             if (!kortti && valinta)
             {
-                Beep.Play();
+                if (sound)
+                {
+                    if (Directory.Exists("C:/temp/SoundClips"))
+                    {
+                        System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+                        Beep.Play();
+                    }
+                }
                 valinta = false;
                 tyhjennys = true;
                 TextBoxClear();
@@ -169,38 +209,113 @@ namespace Bensa
 
         }
 
-        private void ButtonTankkaus_Click(object sender, EventArgs e)
+        private void ButtonTankkaus_Click(object sender, EventArgs e) //TankkausNappi
         {
             if (tankkaus)
             {
-                Beep.Play();
+                if (sound)
+                {
+                    if (Directory.Exists("C:/temp/SoundClips"))
+                    {
+                        System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+                        Beep.Play();
+                    }
+                }
                 tyhjennys = true;
                 TextBoxClear();
                 Progress(litrat);
                 Laskut.Talletus(bensa, litrat, hinta);
+                Laskut.MääräLasku(litrat, bensa);
             }
            
             
         }
         public void InitializeValues() //Tekstitiedostosta hinnat formiin
         {
+            if (!Laskut.Check95())
+            {
+                label1.Enabled = false;
+            }
+            else
+            {
+                label1.Enabled = true;
+            }
+            if (!Laskut.Check98())
+            {
+                label2.Enabled = false;
+            }
+            else
+            {
+                label2.Enabled = true;
+            }
+            if (!Laskut.CheckD())
+            {
+                label3.Enabled = false;
+            }
+            else
+            {
+                label3.Enabled = true;
+            }
 
-            var e95 = File.ReadLines(filepath).ElementAt(0);
-            e95 = e95.Remove(0, e95.IndexOf(' ', +1));
-            textBox1.Text = $"{e95} €";
 
-            var e98 = File.ReadLines(filepath).ElementAt(1);
-            e98 = e98.Remove(0, e98.IndexOf(' ', +1));
-            textBox2.Text = $"{e98} €";
+            if (!eriTiedostot)
+            {
+                var e95 = File.ReadLines(filepath).ElementAt(0);
+                e95 = e95.Remove(0, e95.IndexOf(' ', +1));
+                e95 = Math.Round((double)Convert.ToDouble(e95), 3).ToString();
+                textBox1.Text = $"{e95} €";
 
-            var diesel = File.ReadLines(filepath).ElementAt(2);
-            diesel = diesel.Remove(0, diesel.IndexOf(' ', +1));
-            textBox3.Text =$"{diesel} €";
+                var e98 = File.ReadLines(filepath).ElementAt(1);
+                e98 = e98.Remove(0, e98.IndexOf(' ', +1));
+                e98 = Math.Round((double)Convert.ToDouble(e98), 3).ToString();
+                textBox2.Text = $"{e98} €";
+
+                var diesel = File.ReadLines(filepath).ElementAt(2);
+                diesel = diesel.Remove(0, diesel.IndexOf(' ', +1));
+                diesel = Math.Round((double)Convert.ToDouble(diesel), 3).ToString();
+                textBox3.Text = $"{diesel} €";
+            }
+            else
+            {
+                var e95 = File.ReadLines(filepath101).ElementAt(0);
+                textBox1.Text = $"{e95} €";
+
+                var e98 = File.ReadLines(filepath102).ElementAt(0);
+                textBox2.Text = $"{e98} €";
+
+                var diesel = File.ReadLines(filepath103).ElementAt(0);
+                textBox3.Text = $"{diesel} €";
+            }
+
+            if (!sound)
+            {
+                soundToolStripMenuItem.ForeColor = Color.Red;
+            }
+            else
+            {
+                soundToolStripMenuItem.ForeColor = Color.Green;
+            }
+            if (eriTiedostot)
+            {
+                tiedostoToolStripMenuItem.ForeColor = Color.Red;
+            }
+            else
+            {
+                tiedostoToolStripMenuItem.ForeColor = Color.Green;
+            }
+            
         }
 
         private void Button12_Click(object sender, EventArgs e) //Delete nappi
         {
-            Beep.Play();
+            if (sound)
+            {
+                if (Directory.Exists("C:/temp/SoundClips"))
+                {
+                    System.Media.SoundPlayer Beep = new System.Media.SoundPlayer("C:/temp/SoundClips/Beep.wav");
+                    Beep.Play();
+                }
+            }
             textBox4.Text = "";
         }
         private async void Progress(double litrat) //ProgressBar
@@ -229,30 +344,104 @@ namespace Bensa
 
         }
 
-        private void Button13_Click(object sender, EventArgs e)
+        private void Button13_Click(object sender, EventArgs e) // Kuitti/Lopeta/Uusi asiakas
         {
             if (kuitti)
             {
+                kortti = false;
+                tyhjennys = true;
+                valinta = false;
+                määrä = false;
+                tankkaus = false;
                 kuitti = false;
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer("C:/Temp/SoundClips/Printer.wav");
-                player.Play();
+                litrat = 0;
+                hinta = "";
+                bensa = "";
+                if(Directory.Exists("C:/Temp/SoundClips"))
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer("C:/Temp/SoundClips/Printer.wav");
+                    if (sound)
+                    {
+                        player.Play();
+                    }
+                }
+                
+                
+                this.Hide();
+                //this.Dispose();
+                Form1 f1 = new Form1();
+                f1.ShowDialog();
                 
             }
             
         } //"Kuitin tulostus"
 
-        private void Button14_Click(object sender, EventArgs e)
+        private void Button14_Click(object sender, EventArgs e) // Soita asiakaspalveluun
         {
-            System.Media.SoundPlayer player3 = new System.Media.SoundPlayer("C:/Temp/SoundClips/Calling.wav");
-            player3.Play();
+            if(Directory.Exists("C:/Temp/SoundClips"))
+            {
+                System.Media.SoundPlayer player3 = new System.Media.SoundPlayer("C:/Temp/SoundClips/Calling.wav");
+                if (sound)
+                {
+                    player3.Play();
+                }
+            }
+            
+            
         }
 
-        private void AdminToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AdminToolStripMenuItem_Click(object sender, EventArgs e) // Avaa AdminForm 
         {
-            LoginForm login = new LoginForm();
+            
+            //LoginForm login = new LoginForm();
+            
+            Form tmp = this.FindForm();
+            tmp.Hide();  
             login.ShowDialog();
+            tmp.Close();
+            tmp.Dispose();
         }
 
-        
+        private void TiedostoToolStripMenuItem_Click(object sender, EventArgs e) // Bensan hinnat otetaan 1 tai 3 tiedostosta
+        {
+            if (!eriTiedostot)
+            {
+                eriTiedostot = true;
+                tiedostoToolStripMenuItem.ForeColor = Color.Red;
+            }
+            else
+            {
+                eriTiedostot = false;
+                tiedostoToolStripMenuItem.ForeColor = Color.Green;
+            }
+            
+        }
+
+        private void SoundToolStripMenuItem_Click(object sender, EventArgs e) //Äänet päällä tai Pois
+        {
+            if (Directory.Exists(filepathSound))
+            {
+                if (!sound)
+                {
+                    sound = true;
+
+                    soundToolStripMenuItem.ForeColor = Color.Green;
+
+                }
+                else
+                {
+                    sound = false;
+                    soundToolStripMenuItem.ForeColor = Color.Red;
+                }
+            }
+            
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+       
     }
 }

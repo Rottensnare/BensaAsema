@@ -60,6 +60,8 @@
             this.button14 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiedostoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.soundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,7 +124,6 @@
             this.textBox1.Size = new System.Drawing.Size(106, 19);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "1,552 €";
-            
             // 
             // textBox2
             // 
@@ -402,7 +403,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adminToolStripMenuItem});
+            this.adminToolStripMenuItem,
+            this.tiedostoToolStripMenuItem,
+            this.soundToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(704, 24);
@@ -415,6 +418,20 @@
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.AdminToolStripMenuItem_Click);
+            // 
+            // tiedostoToolStripMenuItem
+            // 
+            this.tiedostoToolStripMenuItem.Name = "tiedostoToolStripMenuItem";
+            this.tiedostoToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.tiedostoToolStripMenuItem.Text = "1 Tiedosto";
+            this.tiedostoToolStripMenuItem.Click += new System.EventHandler(this.TiedostoToolStripMenuItem_Click);
+            // 
+            // soundToolStripMenuItem
+            // 
+            this.soundToolStripMenuItem.Name = "soundToolStripMenuItem";
+            this.soundToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.soundToolStripMenuItem.Text = "Sound";
+            this.soundToolStripMenuItem.Click += new System.EventHandler(this.SoundToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -459,6 +476,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Asiakas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -501,6 +519,8 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiedostoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem soundToolStripMenuItem;
     }
 }
 
